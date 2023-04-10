@@ -1,0 +1,17 @@
+nano playbook.yml
+
+- name: Deploy web app
+  hosts: web
+  tasks:
+    - name: Copy app files
+      copy:
+        src: /path/to/app/files
+        dest: /var/www/html/
+
+- name: Deploy database
+  hosts: db
+  tasks:
+    - name: Copy database files
+      copy:
+        src: /path/to/db/files
+        dest: /var/lib/mysql/
